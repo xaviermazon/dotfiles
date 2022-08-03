@@ -126,13 +126,4 @@ cmake ..
 make -j$(nproc)
 sudo make install
 
-konsole:
-
-git clone https://invent.kde.org/utilities/konsole.git
-git checkout release/22.08
-mkdir konsole/build
-cd konsole/build
-cmake ..
-make
-make install
-
+importar submodulos de configuracion de polybar, i3(contiene la configuracion de picom), emacs, rofi 

@@ -10,7 +10,15 @@
 
 ## Emacs
 
-- ~/.emacs.d -> Carpeta contenedora de la configuración de emacs
+- ~/.emacs.d -> 
+	Carpeta contenedora de la configuración de emacs
+- ~/.emacs.d/init.el
+    Contiene la configuración de arranque del emacs
+- ~/.emacs.d/init.org
+	Contiene información sobre el ficero de init.el
+- ~/.emacs.d/ligature.el
+	Configura el emacs para que pueda trabajar con tipografias/fuentes que 
+	tengan ligaduras.
 
 --------------------------------------------------------------------------------
 
@@ -60,3 +68,10 @@ __NOTA:__ Pendiente de revisar los .ini para dar una mayor claridad y
 	Script para ejecutar el menu de aplicaiones estilo ribbon
 
 --------------------------------------------------------------------------------
+
+## i3-wm
+
+- ~/.config/i3/config ->
+    Fichero de configuración de i3-wm
+- ~/.config/i3/picom.conf ->
+    Fichero de condiguraciñon de picom, nos permite tener transparencias
