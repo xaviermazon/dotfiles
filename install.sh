@@ -14,8 +14,6 @@
 #
 # nivel de error $?
 
-
-
 echo "Actualizando el sistema operativo"
 apt update && apt upgrade -y
 ERRORLEVEL=$?

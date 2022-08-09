@@ -12,7 +12,7 @@ parameters:
 	--restore Restaura los backups de los dots files
 	--backup Crear una copia de seguridad de los dots files
 	--file-path Podemos indicar donde se ubica las estructuras de datos
-1
+	--info-shorcuts Muestra los atajos de teclado de konsole
 
 nivel de error $?
 
