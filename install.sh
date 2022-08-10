@@ -40,15 +40,14 @@ do
 done
 echo "Los paquetes requeridos ya estan instalados en el sistema operativo"
 
-cd ~/dotfiles
+[ ! -d "$HOME/dotfiles" ] && mkdir $HOME/dotfiles
+
+cd $HOME/dotfiles
 git clone --recursive https://github.com/davatorium/rofi.git vendor/davatorium-rofi  
 git clone --recursive https://github.com/polybar/polybar.git vendor/polybar-polybar  
-git clone --recursive https://github.com/xaviermazon/polybar.git vendor/polybar      	
-git clone --recursive https://github.com/xaviermazon/MyConfigEmacs.git vendor/emacs.d
-git clone --recursive https://github.com/xaviermazon/rofi.git vendor/rofi            
-git clone --recursive https://github.com/xaviermazon/i3.git vendor/i3
 
-cd ~/dotfiles/vendor/davatorium-rofi
+echo $HOME/dotfiles/vendor/davatorium-rofi
+cd $HOME/dotfiles/vendor/davatorium-rofi
 git checkout 1.7.3
 echo "Compilando rofi"
 meson setup build
@@ -56,7 +55,8 @@ ninja -C build -j $(nproc)
 echo "Instalando rofi"
 ninja -C build install -j $(nproc)
 echo "Rofi esta instalado"
-cd ~/dotfiles/vendor/polybar-polybar
+echo $HOME/dotfiles/vendor/davatorium-rofi
+cd $HOME/dotfiles/vendor/polybar-polybar
 git checkout 3.6.3
 mkdir build
 cd build
@@ -66,5 +66,7 @@ make -j$(nproc)
 echo "Instalando polybar"
 sudo make install -j $(nproc)
 echo "Polybar esta instalado"
+
+[ -d "$HOME/dotfiles" ] && rm -rf $HOME/dotfiles
 
 echo "Ya esta todo instalado para poner las configuraciones, executa configure.sh"
