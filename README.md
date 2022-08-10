@@ -1,4 +1,28 @@
 
+# Como restaurar los dotfiles
+
+ - Primero se empieza tener git instalado y connexion a internet
+ - Segundo se git clone de este repositorio
+ - Tercero se executa el script install.sh con permisos administrativos(root)
+ - Cuarto se executa el script configure.sh con la cuenta que querais configurar
+ - Quinto se cierra la sessión si se tenia algun entorno de escritorio ya 
+instalado, en caso contrario se reinicia con sudo reboot
+
+## Como cambiar el fondo de pantalla negro
+
+Puede ocurrir que al iniciar session se vea todo negro y es normal
+porque nitrogen, programa que gestiona los fondos de pantalla, no tenga el 
+fondo de pantalla que uso, tal caso podemos abrir el lanzador de aplicaciones
+buscamos el navegdor web y buscamos un fondo de pantalla queramos y se 
+descarga.   
+Acto seguido, abrimos el lanzado de aplicaciones, buscamos el nitrogen y 
+le indicamos la imagen que hemos buscado y aceptamos.
+
+## Atajos de teclado e interactividad con el ratón
+
+- i3: https://github.com/xaviermazon/i3
+- polybar: https://github.com/xaviermazon/polybar
+
 # Configuraciones
 
 ## Bash
