@@ -22,6 +22,14 @@ le indicamos la imagen que hemos buscado y aceptamos.
 
 - i3: https://github.com/xaviermazon/i3
 - polybar: https://github.com/xaviermazon/polybar
+- Emacs: https://github.com/xaviermazon/MyConfigEmacs
+
+Konsole:   
+- Ctrl + ( -> Divides la terminal en vertical
+- Ctrl + ) -> Divides la terminal en horizontal
+- Ctrl + W -> Cierras la division de terminal que estas
+- Ctrl + Flechas de dirección -> Cambias el foco a otra division de terminal
+- Ctrl + M -> Ocultar/mostrar la barra de menu
 
 # Configuraciones
 
