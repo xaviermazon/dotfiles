@@ -16,7 +16,7 @@
 
 
 echo "Actualizando el sistema operativo"
-apt update && apt upgrade -y
+apt update && apt upgrade -y && apt purge
 ERRORLEVEL=$?
 if [ $ERRORLEVEL != 0 ]; then
 	echo "ERROR: comando apt update && apt upgrade -y usa echo $? para ver el error"
@@ -27,17 +27,11 @@ echo "Actualizado el sistema operativo"
 echo "Comprovando los paquetes requeridos"
 for PKG in $(cat required-pkg)
 do
-	STATUS=$(dpkg-query -s $PKG | head -2 | tail -1 | cut -d' ' -f4)
-	ERRORLEVEL=$?
-	if [[ ($STATUS != "installed") || ($ERRORLEVEL != 0) ]]; then
-		apt-get install -qq $PKG > /dev/null
-		ERRORLEVEL=$?
-		if [ $ERRORLEVEL != 0 ]; then
-			echo "ERROR: comando apt install -y usa echo $? para ver el error"
-			exit $ERRORLEVEL
-		fi
-	fi
+    list="$list $PKG"
 done
+
+echo $list
+[ ${#list} != 0 ] && apt-get install -qq $list > /dev/null
 echo "Los paquetes requeridos ya estan instalados en el sistema operativo"
 
 [ ! -d "$HOME/dotfiles" ] && mkdir $HOME/dotfiles

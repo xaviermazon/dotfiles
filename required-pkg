@@ -83,3 +83,6 @@ nitrogen
 picom
 zip
 unzip
+python3-sphinx
+meson
+lm-sensors
