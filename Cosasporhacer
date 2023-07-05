@@ -1,15 +1,21 @@
 - Arreglar los scripts
-- Hacer push automatico o mover las configuraciones hacia los repositorios
-- Ver si los repositorios de codigo fuente se puedan crear ddebian-pkg para debian
+- Hacer push automatico o mover las configuraciones hacia los repositorios:
+  - Tener una carpeta para un solo programa con su configuración
+  - Moverlo en este repositorio
+  - Crear un comando/parametro para gestionar nuevas/modificar/eliminar configuraciones
 - De un script que se baje los programas necesarios para montar un debian con GUI lo mas minimalista posible
   - Comprobar o hacer que se descargue los repositorio sin ssh porque no se tendrá clave
-  - Buscar el repositorio Konsole
+  - Instalar Konsole sin instalar las recomendaciones(-R en el apt)
   - Instalar git y configurarlo
+  - Replantear la posibilidad de: instalar y usar apt-fast o nala
 - Reordenar/reestructurar el README.md
-- Comprobar como gestionar las versiones y ramas de github
 - Cambiar la configuración de emacs para que sea más ligera y modifcar algunos aspectos para que sea más practico
 - Eliminar el screen tearing del i3 y picom
 - Buscar las fonts Ubuntu, Roboto y tipo monospace
+  - Descargar con wget
+  - Descomprimir los tar
+  - Dar propiedad al usuario a las fuentes
+  - Recargar las fuentes
 - Buscar Icon fonts para poner el logo de la distro en la polybar
 - Reconfigurar el i3 para mayor flexibilidad en el cambio de pantalla con los monitores
 - Si apetece hacer lo anterior
